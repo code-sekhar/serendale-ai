@@ -1,0 +1,24 @@
+.main_page_wrape{
+  background: var(--primary-bg);
+  .wrape{
+    height: 100vh;
+    position: relative;
+    .wrape_img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 999px) and (min-width: 300px) {
+  .main_page_wrape .wrape {
+    height: 100%;
+    position: relative;
+  }
+}
