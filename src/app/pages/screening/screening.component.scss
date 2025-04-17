@@ -5,8 +5,8 @@
     width: 100%;
   }
   .sub_header {
-    border-bottom: 1px solid #D2D2D2;
-    border-top: 1px solid #D2D2D2;
+    border-bottom: 1px solid #cccccca8;
+    border-top: 1px solid #cccccca8;
     height: 75px;
     line-height: 75px;
   }
@@ -110,6 +110,11 @@
           outline: none;
           color: #fff;
           width: 100%;
+          font-family: var(--font-base) ;
+          padding: 0px 10px;
+        }
+        >input::placeholder{
+          font-family: var(--font-base) ;
         }
         .search_icons{
           position: absolute;
@@ -159,7 +164,7 @@
     h4 {
       color: #FFF;
       font-family: Georgia;
-      font-size: 22px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       line-height: 1;
@@ -176,7 +181,7 @@
       width: 100%;
       color: #000;
       font-family: Georgia;
-      font-size: 22px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -190,7 +195,7 @@
     a {
       color: #FFF;
       font-family: Georgia;
-      font-size: 22px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -215,8 +220,14 @@
   }
 
 }
-
-
+.number_point>span {
+  width: 15px;
+  display: block;
+}
+.arrow_box.d-flex.align-items-center.gap-3 {
+  justify-content: end;
+  padding-right: 8px;
+}
 $color_1: #FFF;
 $font-family_1: Georgia;
 
@@ -234,12 +245,13 @@ $font-family_1: Georgia;
   margin-bottom: 40px;
 }
 .ft_icon_cart {
-  border-radius: 25px;
+  border-radius: 18px;
   border: 2px solid rgba(255, 255, 255, 0.05);
   background: #3D3D3D;
   backdrop-filter: blur(7.5px);
   padding: 30px 20px;
-  width: 90%;
+  width: 88%;
+    margin: auto;
 }
 .inner_ft_container {
   >h3 {
@@ -274,6 +286,9 @@ $font-family_1: Georgia;
 }
 .feature_list_wraper {
   padding-bottom: 50px;
+}
+.container-fluid {
+  padding: 0px 50px !important;
 }
 @media only screen and (max-width: 999px) and (min-width: 300px) {
   .full_row {
@@ -338,4 +353,7 @@ $font-family_1: Georgia;
   .feature_list_wraper {
     padding-bottom: 100px;
   }
+  .container-fluid {
+    padding: 0px 14px !important;
+}
 }
