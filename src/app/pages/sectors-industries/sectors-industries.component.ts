@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 // interface Sector {
 //   name: string;
 //   checked: boolean;
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 // }
 @Component({
   selector: 'app-sectors-industries',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,RouterLink],
   templateUrl: './sectors-industries.component.html',
   styleUrl: './sectors-industries.component.scss'
 })
