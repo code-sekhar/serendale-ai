@@ -37,6 +37,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    padding-left: 15px;
   }
   .list_inner_content {
     width: 100%;
@@ -174,11 +175,12 @@
 
 
   .chat_exp_btn{
+    text-align: left;
     width: 100%;
     button {
       border-radius: 7px;
       background: #FFF;
-      width: 100%;
+      width: 85%;
       color: #000;
       font-family: Georgia;
       font-size: 20px;
@@ -235,7 +237,7 @@ $font-family_1: Georgia;
   >h2 {
     color: $color_1;
     font-family: $font-family_1;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -249,9 +251,17 @@ $font-family_1: Georgia;
   border: 2px solid rgba(255, 255, 255, 0.05);
   background: #3D3D3D;
   backdrop-filter: blur(7.5px);
-  padding: 30px 20px;
-  width: 88%;
+  padding: 30px 15px;
+  width:196px;
     margin: auto;
+    height: 280px;
+    cursor: pointer;
+}
+.inner_ft_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .inner_ft_container {
   >h3 {
@@ -289,6 +299,14 @@ $font-family_1: Georgia;
 }
 .container-fluid {
   padding: 0px 50px !important;
+}
+a.delete_link {
+  span{
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
 }
 @media only screen and (max-width: 999px) and (min-width: 300px) {
   .full_row {
@@ -349,6 +367,12 @@ $font-family_1: Georgia;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    span{
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
   }
   .feature_list_wraper {
     padding-bottom: 100px;
