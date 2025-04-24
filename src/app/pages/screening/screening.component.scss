@@ -209,7 +209,7 @@
   }
 }
 .arrow_box{
-  width: 150px;
+  width: 198px;
   text-align: center;
   >h2 {
     color: #FFF;
@@ -303,10 +303,16 @@ $font-family_1: Georgia;
 a.delete_link {
   span{
     img {
-      width: 15px;
-      height: 15px;
+      width: 12px;
+      height: 12px;
     }
   }
+}
+input.search_box{
+  font-size: 14px;
+}
+input.search_box::placeholder{
+  font-size: 14px;
 }
 @media only screen and (max-width: 999px) and (min-width: 300px) {
   .full_row {

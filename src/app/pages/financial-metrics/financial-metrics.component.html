@@ -221,83 +221,64 @@
               <div class="filter_section">
                 <div class="filter_header mb-3 d-flex">
                     <span class="icon_header">
-                        <img src="./img/cog.png" alt="">
+                        <img src="./img/clock.png" alt="">
                     </span>
-                    <h3>Sectors and Industries</h3>
+                    <h3>Financial Metrics</h3>
                     <a routerLink="" class="close_del">
                       <i class="fa-solid fa-xmark"></i>
                     </a>
                 </div>
                 <div class="filter_main_data">
                     <div class="sector-container">
-                        <div class="row ">
-                            <div *ngFor="let sector of sectors" class="sector col-lg-4 col-md-6 col-12">
-                                <div class="sector-header">
-                                  <input type="checkbox" [(ngModel)]="sector.checked" (change)="toggleCheck(sector, true)" class="form-check-input">
-                                  <span>{{ sector.name }}</span>
-                                  <span *ngIf="sector.children" class="toggle-icon" (click)="toggleExpand(sector)">
-                                    {{ sector.expanded ? '▾' : '▸' }}
-                                  </span>
-                                </div>
-                            
-                                <div class="children" *ngIf="sector.expanded && sector.children">
-                                  <div *ngFor="let child of sector.children" class="child">
-                                    <div class="sector-header">
-                                      <input type="checkbox" [(ngModel)]="child.checked" (change)="toggleCheck(child)" class="form-check-input">
-                                      <span>{{ child.name }}</span>
-                                      <span *ngIf="child.children" class="toggle-icon" (click)="toggleExpand(child)">
-                                        {{ child.expanded ? '▾' : '▸' }}
-                                      </span>
-                                    </div>
-                            
-                                    <div class="sub-children" *ngIf="child.expanded && child.children">
-                                      <div *ngFor="let subChild of child.children" class="sub-child">
-                                        <input type="checkbox" [(ngModel)]="subChild.checked" class="form-check-input">
-                                        <span>{{ subChild.name }}</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!----------------------next------------------>
-                                <div *ngFor="let sector of sector.combained" class="sector_box">
-                                  <div class="sector-header">
-                                    <input type="checkbox" [(ngModel)]="sector.checked" (change)="toggleCheck(sector, true)" class="form-check-input">
-                                    <span>{{ sector.name }}</span>
-                                    <span *ngIf="sector.children" class="toggle-icon" (click)="toggleExpand(sector)">
-                                      {{ sector.expanded ? '▾' : '▸' }}
-                                    </span>
-                                  </div>
-                              
-                                  <div class="children" *ngIf="sector.expanded && sector.children">
-                                    <div *ngFor="let child of sector.children" class="child">
-                                      <div class="sector-header">
-                                        <input type="checkbox" [(ngModel)]="child.checked" (change)="toggleCheck(child)" class="form-check-input">
-                                        <span>{{ child.name }}</span>
-                                        <span *ngIf="child.children" class="toggle-icon" (click)="toggleExpand(child)">
-                                          {{ child.expanded ? '▾' : '▸' }}
-                                        </span>
-                                      </div>
-                              
-                                      <div class="sub-children" *ngIf="child.expanded && child.children">
-                                        <div *ngFor="let subChild of child.children" class="sub-child">
-                                          <input type="checkbox" [(ngModel)]="subChild.checked" class="form-check-input">
-                                          <span>{{ subChild.name }}</span>
+                        <div class="form_boxs">
+                            <div class="form_item">
+                                <div class="row">
+                                    <div class="col-lg-12 m-auto">
+                                        <div class="row">
+                                           
+                                            
+                                            <div class="col-lg-12">
+                                                <div class="row filter-row">
+                                                    <div class="col-md-2 filter-label">Revenue </div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Min"></div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Max"></div>
+                                                  </div>
+                                              
+                                                  <div class="row filter-row">
+                                                    <div class="col-md-2 filter-label">EBITDA</div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Min"></div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Max"></div>
+                                                  </div>
+                                              
+                                                  <div class="row filter-row">
+                                                    <div class="col-md-2 filter-label">Net Income</div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Min"></div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Max"></div>
+                                                  </div>
+                                              
+                                                  <div class="row filter-row">
+                                                    <div class="col-md-2 filter-label">Enterprise Value</div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Min"></div>
+                                                    <div class="col-md-5"><input type="number" class="form-control" placeholder="Max"></div>
+                                                  </div>
+                                              
+                                                  <div class="row filter-row">
+                                                    <div class="col-md-2 filter-label">Fiscal Period</div>
+                                                    <div class="col-md-5">
+                                                      <input type="date" class="form-control date-input" placeholder="From">
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                      <input type="date" class="form-control date-input" placeholder="To">
+                                                    </div>
+                                                 </div>
+                                            </div>
                                         </div>
-                                      </div>
                                     </div>
-                                  </div>
-
-
-
                                 </div>
-                              </div>
+                                
+                            </div>
                         </div>
-                      
-                        
-                  
-                      </div>
-                      
-                      
+                    </div>
                 </div>
               </div>
             </div>

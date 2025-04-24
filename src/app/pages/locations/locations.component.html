@@ -221,9 +221,9 @@
               <div class="filter_section">
                 <div class="filter_header mb-3 d-flex">
                     <span class="icon_header">
-                        <img src="./img/cog.png" alt="">
+                        <img src="./img/glob.png" alt="">
                     </span>
-                    <h3>Sectors and Industries</h3>
+                    <h3>Locations</h3>
                     <a routerLink="" class="close_del">
                       <i class="fa-solid fa-xmark"></i>
                     </a>
@@ -256,40 +256,30 @@
                                         <span>{{ subChild.name }}</span>
                                       </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <!----------------------next------------------>
-                                <div *ngFor="let sector of sector.combained" class="sector_box">
-                                  <div class="sector-header">
-                                    <input type="checkbox" [(ngModel)]="sector.checked" (change)="toggleCheck(sector, true)" class="form-check-input">
-                                    <span>{{ sector.name }}</span>
-                                    <span *ngIf="sector.children" class="toggle-icon" (click)="toggleExpand(sector)">
-                                      {{ sector.expanded ? '▾' : '▸' }}
-                                    </span>
-                                  </div>
-                              
-                                  <div class="children" *ngIf="sector.expanded && sector.children">
-                                    <div *ngFor="let child of sector.children" class="child">
-                                      <div class="sector-header">
-                                        <input type="checkbox" [(ngModel)]="child.checked" (change)="toggleCheck(child)" class="form-check-input">
-                                        <span>{{ child.name }}</span>
-                                        <span *ngIf="child.children" class="toggle-icon" (click)="toggleExpand(child)">
-                                          {{ child.expanded ? '▾' : '▸' }}
-                                        </span>
-                                      </div>
-                              
-                                      <div class="sub-children" *ngIf="child.expanded && child.children">
-                                        <div *ngFor="let subChild of child.children" class="sub-child">
-                                          <input type="checkbox" [(ngModel)]="subChild.checked" class="form-check-input">
-                                          <span>{{ subChild.name }}</span>
+
+
+                                    <div class="children" *ngIf="child.expanded && child.children">
+                                        <div *ngFor="let childs of child.children" class="child">
+                                            <div class="sector-header">
+                                              <input type="checkbox" [(ngModel)]="childs.checked" (change)="toggleCheck(childs)" class="form-check-input">
+                                              <span>{{ childs.name }}</span>
+                                              <span *ngIf="childs.children" class="toggle-icon" (click)="toggleExpand(childs)">
+                                                {{ childs.expanded ? '▾' : '▸' }}
+                                              </span>
+                                            </div>
+                                    
+                                            <div class="sub-children" *ngIf="childs.expanded && childs.children">
+                                              <div *ngFor="let subChild of childs.children" class="sub-child">
+                                                <input type="checkbox" [(ngModel)]="subChild.checked" class="form-check-input">
+                                                <span>{{ subChild.name }}</span>
+                                              </div>
+                                            </div>
                                         </div>
                                       </div>
-                                    </div>
                                   </div>
 
-
-
                                 </div>
+                               
                               </div>
                         </div>
                       

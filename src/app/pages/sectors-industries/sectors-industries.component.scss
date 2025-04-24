@@ -209,7 +209,7 @@
   }
 }
 .arrow_box{
-  width: 150px;
+  width: 198px;
   text-align: center;
   >h2 {
     color: #FFF;
@@ -295,9 +295,9 @@ $font-family_1: Georgia;
 }
 .filter_container {
   border-radius: 25px;
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  background: #19191957;
-  backdrop-filter: blur(7.5px);
+  border: 2px solid rgba(255, 255, 255, 0);
+  // background: #19191900;
+  // backdrop-filter: blur(7.5px);
 }
 span.icon_header>img {
   width: 38px;
@@ -307,7 +307,7 @@ span.icon_header>img {
   align-items: center;
   gap: 13px;
 }
-
+//BusinessCyclesBackingStatus
 .filter_header>h3 {
   color: #FFF;
   font-family: Aleo;
@@ -319,7 +319,7 @@ span.icon_header>img {
 }
 
 .filter_container {
-  padding: 24px 32px;
+  padding: 24px 0px;
 }
 .data_margin{
   margin-top: 30px;
@@ -356,8 +356,8 @@ span.icon_header>img {
 a.delete_link {
   span{
     img {
-      width: 15px;
-      height: 15px;
+      width: 12px;
+      height: 12px;
     }
   }
 }
@@ -471,8 +471,8 @@ display: none;
 
 
 .filter_container {
-height: 360px;
-overflow-y: scroll;
+// height: 360px;
+// overflow-y: scroll;
 }
 
 .filter_container::-webkit-scrollbar {
@@ -502,7 +502,12 @@ a.close_del {
   font-size: 30px;
 }
 
-
+input.search_box{
+  font-size: 14px;
+}
+input.search_box::placeholder{
+  font-size: 14px;
+}
 @media only screen and (max-width: 999px) and (min-width: 300px) {
   .full_row {
     display: grid;
