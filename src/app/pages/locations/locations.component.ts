@@ -20,7 +20,7 @@ export class LocationsComponent {
         {
           name: 'United States of America',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             {
               name: 'West',
@@ -37,7 +37,7 @@ export class LocationsComponent {
             {
               name: 'Midwest',
               checked: false,
-              expanded: true,
+              expanded: false,
               children: [
                 { name: 'Illinois', checked: false },
                 { name: 'Indiana', checked: false },
@@ -56,7 +56,7 @@ export class LocationsComponent {
             {
               name: 'South',
               checked: false,
-              expanded: true,
+              expanded: false,
               children: [
                 { name: 'Alabama', checked: false },
                 { name: 'Arkansas', checked: false },
@@ -80,7 +80,7 @@ export class LocationsComponent {
             {
               name: 'Northeast',
               checked: false,
-              expanded: true,
+              expanded: false,
               children: [
                 { name: 'Connecticut', checked: false },
                 { name: 'Maine', checked: false },
@@ -98,7 +98,7 @@ export class LocationsComponent {
         {
           name: 'US Territories and Possessions',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'American Samoa', checked: false },
             { name: 'Guam', checked: false },
@@ -112,7 +112,7 @@ export class LocationsComponent {
         {
           name: 'Canada',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Alberta', checked: false },
             { name: 'British Columbia', checked: false },
@@ -139,7 +139,7 @@ export class LocationsComponent {
         {
           name: 'Caribbean',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Anguilla', checked: false },
             { name: 'Antigua and Barbuda', checked: false },
@@ -173,7 +173,7 @@ export class LocationsComponent {
         {
           name: 'Central America & Mexico',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Belize', checked: false },
             { name: 'Costa Rica', checked: false },
@@ -188,7 +188,7 @@ export class LocationsComponent {
         {
           name: 'South America',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Argentina', checked: false },
             { name: 'Bolivia', checked: false },
@@ -216,7 +216,7 @@ export class LocationsComponent {
         {
           name: 'Developed Markets',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Andorra', checked: false },
             { name: 'Austria', checked: false },
@@ -248,7 +248,7 @@ export class LocationsComponent {
         {
           name: 'Emerging Markets',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Albania', checked: false },
             { name: 'Belarus', checked: false },
@@ -284,7 +284,7 @@ export class LocationsComponent {
         {
           name: 'Developed Markets',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Australia', checked: false },
             { name: 'Hong Kong', checked: false },
@@ -297,7 +297,7 @@ export class LocationsComponent {
         {
           name: 'Emerging Markets',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             {
               name: 'Central Asia',
@@ -389,7 +389,7 @@ export class LocationsComponent {
         {
           name: 'Middle East',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Bahrain', checked: false },
             { name: 'Cyprus', checked: false },
@@ -410,7 +410,7 @@ export class LocationsComponent {
         {
           name: 'North Africa',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Algeria', checked: false },
             { name: 'Egypt', checked: false },
@@ -424,7 +424,7 @@ export class LocationsComponent {
         {
           name: 'Sub-Saharan Africa',
           checked: false,
-          expanded: true,
+          expanded: false,
           children: [
             { name: 'Angola', checked: false },
             { name: 'Benin', checked: false },
@@ -533,7 +533,7 @@ combined: any;
     });
   }
   ngOnInit(): void {
-    this.expandAll(this.sectors);
+  //  this.expandAll(this.sectors);
   }
   
 }

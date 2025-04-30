@@ -310,7 +310,7 @@
   
   .filter_header>h3 {
     color: #FFF;
-    font-family: Aleo;
+    font-family: Georgia;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -488,8 +488,32 @@ input.search_box{
   font-size: 14px;
 }
 input.search_box::placeholder{
+  font-family: Georgia !important;
   font-size: 14px;
 }
+.filter_header.mb-3.d-flex>a.close_del {
+  margin-right: unset !important;
+}
+span.form_icon>img {
+  width: 30px;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.custom_inputs {
+  font-family: Georgia !important;
+}
+
+.custom_inputs>span {
+  font-family: Georgia !important;
+}
+.custom_inputs textarea::placeholder {
+  font-family: Georgia !important;
+}
+
+
   @media only screen and (max-width: 999px) and (min-width: 300px) {
     .full_row {
       display: grid;

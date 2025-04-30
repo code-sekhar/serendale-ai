@@ -310,7 +310,7 @@
   //BusinessCyclesBackingStatus
   .filter_header>h3 {
     color: #FFF;
-    font-family: Aleo;
+    font-family: Georgia;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -513,7 +513,7 @@
     margin-bottom: 1.5rem;
   }
   .filter-label {
-    color: #fff;
+    color: #a7a7a7;
 }
 .custom_input label {
     margin-bottom: 12px;
@@ -539,6 +539,15 @@
 }
 .filter-row input::placeholder {
     color: #ffffff;
+}
+.filter_header.mb-3.d-flex> a.close_del {
+  margin-right: unset !important;
+}
+.center_tex_hd>h4 {
+  margin-bottom: 12px;
+  color: #a7a7a7;
+  font-size: 12px;
+  font-family: Georgia, serif;
 }
   @media only screen and (max-width: 999px) and (min-width: 300px) {
     .full_row {

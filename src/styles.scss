@@ -12,6 +12,7 @@
 }
 body{
   background-color: #000 !important;
+  font-family: 'Georgia', sans-serif !important;
 }
 button.submit_button {
   font-size: 14px !important;
@@ -24,4 +25,98 @@ button.submit_button {
 }
 input.search_box {
   padding-left: 0px !important;
+}
+.sector {
+  padding-bottom: 0px !important;
+  margin: 0px !important;
+}
+
+.child {
+  margin-top: 0px;
+  padding-bottom: 0px !important;
+}
+.sub-children,.sector {
+  
+  padding-bottom: 25px !important;
+}
+.sector {
+  padding-bottom: 0px !important;
+}
+
+
+/*temporary*/
+.pages .main_list_wrapers .butto_submit_wraper button.submit_button{
+
+  background: #ffffff !important;
+  color: #181818 !important;
+
+}
+a.close_del {
+ 
+  color: #1f1f1f !important;
+  /* height: 35px; */
+  padding: 0px 12px  !important;
+  padding-top: 8px !important;
+  justify-content: center  !important;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1;
+  border-radius: 7px;
+  // background: #3d3d3d !important;
+  color: #ffffff !important;
+  font-family: Georgia !important;
+  font-size: 15px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  outline: none;
+}
+.pages  .heading_sub  > h2 {
+
+  font-size: 20px !important;
+  font-weight: 400 !important;
+
+}
+.list_inner_content.position_shift {
+  position: relative;
+  left: 7px;
+}
+.pages  .list_content_areas .add_button_wraper {
+  width: 65px !important;
+  text-align: right;
+}
+a.close_del {
+  // margin-right: 604px !important;
+  justify-content: space-between;
+  margin-left: unset !important;
+}
+.pages .sub_header {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.6588235294) !important;
+  border-top: 1px solid rgba(204, 204, 204, 0.6588235294) !important;
+  border-image: linear-gradient(to right, #ffffff8c, #a5a5a5, #a5a5a54d, #90ee9008) !important;
+  border-image-slice: 1 !important;
+}
+.pages .list_content_areas .list_inner_content.search_parent{
+
+  position: relative;
+  left: -4px;
+}
+.sub-children, .sector {
+  padding-bottom: 13px !important;
+}
+.filter-label {
+  font-size: 12px;
+  font-family: Georgia, serif;
+}
+input,select{
+  font-family: Georgia !important;
+}
+.filter-row input,select{
+  font-family: Georgia !important;
+  font-size: 12px !important;
+  width:80% !important;
+}
+.filter-row.only_this_field input,select{
+  width:100% !important;
 }

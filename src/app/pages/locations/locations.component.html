@@ -57,8 +57,8 @@
   
                     </div>
   
-                    <div class="list_inner_content">
-                      <h4>Industry Classification: (Primary) Real Estate;Health Care</h4>
+                    <div class="list_inner_content position_shift">
+                      <h4>Industry Classification: (Primary) Real Estate; Health Care</h4>
                     </div>
                     <div class="action_price_section">
                       <h4>250,000</h4>
@@ -180,7 +180,7 @@
                   <div class="d-flex width-100 ">
                     <div class="list_inner_content search_parent only_input_border">
                       <div class="search_input">
-                        <input type="text" placeholder="Add Search Criteria or Add Keywords" class="search_box">
+                        <input type="text" placeholder=" Add Search Criteria or Add Keywords" class="search_box">
                         <span class="search_icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
                               <path d="M8.16997 12.4149C6.77503 12.4149 5.59458 11.9317 4.62861 10.9652C3.66265 9.99871 3.17941 8.81825 3.17889 7.42382C3.17838 6.02939 3.66162 4.84893 4.62861 3.88246C5.5956 2.91598 6.77606 2.43274 8.16997 2.43274C9.56389 2.43274 10.7446 2.91598 11.7121 3.88246C12.6796 4.84893 13.1626 6.02939 13.1611 7.42382C13.1611 7.98692 13.0715 8.51802 12.8923 9.01713C12.7131 9.51623 12.47 9.95775 12.1628 10.3417L16.4628 14.6417C16.6036 14.7825 16.674 14.9616 16.674 15.1792C16.674 15.3968 16.6036 15.5759 16.4628 15.7167C16.3221 15.8575 16.1429 15.9279 15.9253 15.9279C15.7078 15.9279 15.5286 15.8575 15.3878 15.7167L11.0878 11.4167C10.7039 11.7238 10.2624 11.967 9.76328 12.1462C9.26417 12.3253 8.73307 12.4149 8.16997 12.4149ZM8.16997 10.8792C9.1298 10.8792 9.94578 10.5434 10.6179 9.87175C11.29 9.20013 11.6259 8.38416 11.6253 7.42382C11.6248 6.46349 11.289 5.64776 10.6179 4.97666C9.9468 4.30555 9.13082 3.96948 8.16997 3.96846C7.20913 3.96743 6.39341 4.3035 5.72281 4.97666C5.05221 5.64981 4.71615 6.46553 4.71461 7.42382C4.71308 8.38211 5.04914 9.19809 5.72281 9.87175C6.39648 10.5454 7.2122 10.8812 8.16997 10.8792Z" fill="#999999"/>
@@ -219,18 +219,25 @@
         <div class="filter_container">
             <div class="inner_filter_container">
               <div class="filter_section">
-                <div class="filter_header mb-3 d-flex">
-                    <span class="icon_header">
-                        <img src="./img/glob.png" alt="">
-                    </span>
-                    <h3>Locations</h3>
-                    <a routerLink="" class="close_del">
-                      <i class="fa-solid fa-xmark"></i>
-                    </a>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="filter_header mb-3 d-flex">
+                      <span class="icon_header">
+                          <img src="./img/glob.png" alt="">
+                      </span>
+                      <h3>Locations</h3>
+                      <a routerLink="" class="close_del">
+                        <i class="fa-solid fa-xmark"></i>
+                      </a>
+                  </div>
+                  </div>
+                  <div class="col-lg-4"></div>
                 </div>
                 <div class="filter_main_data">
                     <div class="sector-container">
-                        <div class="row ">
+                       <div class="row">
+                        <div class="col-lg-10">
+                          <div class="row ">
                             <div *ngFor="let sector of sectors" class="sector col-lg-4 col-md-6 col-12">
                                 <div class="sector-header">
                                   <input type="checkbox" [(ngModel)]="sector.checked" (change)="toggleCheck(sector, true)" class="form-check-input">
@@ -282,6 +289,8 @@
                                
                               </div>
                         </div>
+                        </div>
+                       </div>
                       
                         
                   

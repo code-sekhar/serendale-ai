@@ -497,7 +497,7 @@ background:  rgb(83, 83, 83);
 }
 
 a.close_del {
-  margin-left: auto;
+  // margin-left: auto;
   color: #fff;
   font-size: 30px;
 }
@@ -507,6 +507,99 @@ input.search_box{
 }
 input.search_box::placeholder{
   font-size: 14px;
+}
+.sector:nth-child(8) >.inner_sector_wrapes>.sector-header{
+   display: none
+}
+
+.sub-children {
+  // margin-bottom: 18px;
+}
+
+/*temporary css*/
+.Care.Equipment.Health.Services.and.sub-children {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.Services.Software.and.sub-children {
+  margin-bottom: 0 !important;
+  padding-bottom: 0px !important;
+}
+
+.Equipment.Hardware.Technology.and.sub-children {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.Biotechnology.Life.Pharmaceuticals\,.Sciences.and.sub-children {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.sector>.sector-header {
+  margin-bottom: 8px !important;
+}
+
+
+.children .sector-header {
+  margin-bottom: 12px !important;
+}
+
+// .Care.Equipment.Services.and.child-dt-dd.Health {
+//   height: 124px;
+// }
+
+// .Services.and.child-dt-dd.Software {
+//   height: 98px;
+// }
+// .child-dt-dd {
+//   min-height: 100px !important;
+// }
+
+// .child-dt-dd:nth-child(3) {
+//   padding-top: 15px !important;
+//   min-height: unset !important;
+// }
+// .sector {
+//   border: 1px solid #ffffff26;
+// }
+// .sector {
+//   border: 1px solid #ffffff26;
+// }
+
+// .child-dt-dd {border: 1px solid #ffffff3d;}
+
+
+
+.child-dt-dd {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sector {
+  padding-bottom: 10px !important;
+}
+.row_auto {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.sector {
+  width: 100%;
+}
+// .child-dt-dd,.sector_box {border: 1px solid #ffffff3d;}
+.row-autoscroll {
+  column-count: 3; /* Number of columns */
+  column-gap: 24px;
+}
+
+.sector {
+  display: inline-block;
+  margin-bottom: 10px !important;
 }
 @media only screen and (max-width: 999px) and (min-width: 300px) {
   .full_row {

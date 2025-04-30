@@ -310,7 +310,7 @@
   
   .filter_header>h3 {
     color: #FFF;
-    font-family: Aleo;
+    font-family: Georgia;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -507,7 +507,11 @@
   input.search_box::placeholder{
     font-size: 14px;
   }
-  
+  .sector {
+    width: 32% !important;
+    padding-left: 0 !important;
+    width: 90%;
+}
   @media only screen and (max-width: 999px) and (min-width: 300px) {
     .full_row {
       display: grid;

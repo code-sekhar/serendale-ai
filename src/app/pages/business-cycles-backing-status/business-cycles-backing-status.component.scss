@@ -310,7 +310,7 @@
   //BusinessCyclesBackingStatus
   .filter_header>h3 {
     color: #FFF;
-    font-family: Aleo;
+    font-family: Georgia;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -510,6 +510,16 @@
   }
   .business_table .table>:not(caption)>*>* {
     background: #00000000;
+}
+.table{
+  font-family: Georgia, serif !important;
+}
+.business_table .table  > :not(caption) > * > * {
+  background: rgb(0 0 0 / 0%);
+  border-bottom: none !important;
+}
+tbody>tr>td {
+  padding-left: 26px !important;
 }
   @media only screen and (max-width: 999px) and (min-width: 300px) {
     .full_row {
