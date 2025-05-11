@@ -518,7 +518,7 @@
 .custom_input label,.filter-label {
     margin-bottom: 12px;
     // color: #fff;
-    color: #a7a7a7;
+    color: #ffffff;
 }
 .row.filter-row .filter-label {
   margin-bottom: 0;
@@ -552,9 +552,12 @@
 }
 .center_tex_hd>h4 {
   margin-bottom: 12px;
-  color: #a7a7a7;
+  color: #ffffff;
   font-size: 12px;
   font-family: Georgia, serif;
+}
+label{
+  font-family: Georgia, serif !important;
 }
   @media only screen and (max-width: 999px) and (min-width: 300px) {
     .filter-row input {

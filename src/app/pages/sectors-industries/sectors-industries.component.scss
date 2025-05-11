@@ -517,25 +517,25 @@ input.search_box::placeholder{
 }
 
 /*temporary css*/
-.Care.Equipment.Health.Services.and.sub-children {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
+// .Care.Equipment.Health.Services.and.sub-children {
+//   margin-bottom: 0 !important;
+//   padding-bottom: 0 !important;
+// }
 
-.Services.Software.and.sub-children {
-  margin-bottom: 0 !important;
-  padding-bottom: 0px !important;
-}
+// .Services.Software.and.sub-children {
+//   margin-bottom: 0 !important;
+//   padding-bottom: 0px !important;
+// }
 
-.Equipment.Hardware.Technology.and.sub-children {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
+// .Equipment.Hardware.Technology.and.sub-children {
+//   margin-bottom: 0 !important;
+//   padding-bottom: 0 !important;
+// }
 
-.Biotechnology.Life.Pharmaceuticals\,.Sciences.and.sub-children {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
+// .Biotechnology.Life.Pharmaceuticals\,.Sciences.and.sub-children {
+//   margin-bottom: 0 !important;
+//   padding-bottom: 0 !important;
+// }
 
 .sector>.sector-header {
   margin-bottom: 8px !important;
@@ -543,7 +543,7 @@ input.search_box::placeholder{
 
 
 .children .sector-header {
-  margin-bottom: 12px !important;
+  margin-bottom: 0px !important;
 }
 
 // .Care.Equipment.Services.and.child-dt-dd.Health {
@@ -573,8 +573,9 @@ input.search_box::placeholder{
 
 
 .child-dt-dd {
-  margin-top: 20px;
+  margin-top: 0px;
   height: 100%;
+  margin-bottom: 10px;
 }
 
 .sector {
@@ -601,6 +602,23 @@ input.search_box::placeholder{
   display: inline-block;
   margin-bottom: 10px !important;
 }
+.feature_list_wraper.data_margin .sub-children{
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+.sector_box.utility {
+  padding: 0px 0px;
+  margin-bottom: 0px;
+}
+.inner_sector_wrapes .sector_box.utility {
+  margin-top: 0px;
+}
+.custom_flex{
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 @media only screen and (max-width: 999px) and (min-width: 300px) {
   .full_row {
     display: grid;

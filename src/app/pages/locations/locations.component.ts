@@ -2,14 +2,25 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ApiService } from '../../services/api.service';
+import { CriteriaComponent } from '../../components/criteria/criteria.component';
 
 @Component({
   selector: 'app-locations',
-  imports: [CommonModule, FormsModule,RouterLink],
+  imports: [CommonModule, FormsModule,RouterLink,CriteriaComponent],
   templateUrl: './locations.component.html',
   styleUrl: './locations.component.scss'
 })
 export class LocationsComponent {
+ 
+  geographyCount: number = 0;
+  countryCount: number = 0;
+
+  selectedGeography: string[] = [];
+  selectedCompanyName: string[] = [];
+  
+  constructor(private apiService: ApiService) {}
+
   sectors: any = [
     {
       name: 'United States and Canada',
@@ -488,34 +499,140 @@ export class LocationsComponent {
   
 sector: any;
 combined: any;
-  // toggleExpand(item: any) {
+data_locations:any;
+  // toggleExpand(item: any): void {
   //   item.expanded = !item.expanded;
   // }
 
-  // toggleCheck(item: any, isParent = false) {
-  //   if (item.children) {
+  // toggleCheck(item: any, cascade: boolean = false): void {
+  //   if (cascade && item.children) {
   //     item.children.forEach((child: any) => {
   //       child.checked = item.checked;
-  //       this.toggleCheck(child);
+  //       this.toggleCheck(child, true);
   //     });
   //   }
-
-  //   if (isParent && item.checked) {
-  //     item.expanded = true;
-  //   }
   // }
+
+
+
   toggleExpand(item: any): void {
     item.expanded = !item.expanded;
   }
 
-  toggleCheck(item: any, cascade: boolean = false): void {
-    if (cascade && item.children) {
+  toggleCheck1(item: any,isParent = false): void {
+    if (item.children) {
       item.children.forEach((child: any) => {
         child.checked = item.checked;
-        this.toggleCheck(child, true);
       });
     }
+    
+
+    // if (isParent && item.checked) {
+    //   item.expanded = true;
+    // }
   }
+
+  toggleCheck(item: any, level: number = 0,isParent = false): void {
+    if (item.children) {
+      item.children.forEach((child: any) => {
+        child.checked = item.checked;
+        this.toggleCheck1(child,isParent);
+      });
+    }
+
+
+
+    if (item.checked && item.name !== "") {
+      // If checked, add to correct array
+      if (level === 0) {
+        this.selectedGeography.push(item.name);
+        // Clear children when parent is touched
+        //this.selectedCompanyName = [];
+      } 
+      else if (level === 1) {
+        this.selectedCompanyName.push(item.name);
+      }
+    } else {
+      // If unchecked, remove from correct array
+      if (level === 0) {
+        this.selectedGeography = this.selectedGeography.filter(name => name !== item.name);
+        // Clear children when parent is touched
+       // this.selectedCompanyName = [];
+      } 
+      else if (level === 1) {
+        this.selectedCompanyName = this.selectedCompanyName.filter(name => name !== item.name);
+      } 
+    }
+    this.displayCounts(level);
+  }
+
+  displayCounts(level: number): void {
+    let payload: any = {};
+
+    if (this.selectedGeography.length > 0) {
+      payload.geography = this.selectedGeography;
+    }
+    if (this.selectedCompanyName.length > 0) {
+      payload.country_name = this.selectedCompanyName;
+    }
+
+
+    console.log('Locations Final Payload:', payload);
+    // console.log('Final:');
+
+    if (Object.keys(payload).length === 0) {
+      this.geographyCount = 0;
+      this.countryCount = 0;
+      payload = {};
+      // alert("Please select at least one checkbox.");
+      return;
+    }
+    this.data_locations = payload.geography;
+   console.log(this.data_locations);
+   
+   this.sendGeographyAndCompanyNamePayloadToBackend(payload,level);
+  }
+
+
+
+
+  getLocationList() {
+    const locations = this.data_locations?.join(', ') || '';
+    sessionStorage.setItem('geography', locations); // Save as string
+  //sessionStorage.setItem('industry_Classification', JSON.stringify(this.data_inds));
+    return locations;
+  }
+    ngOnInit() {
+  const geography = sessionStorage.getItem('geography');
+  if (geography) {
+    this.data_locations = geography.split(', ')
+  }
+}
+  sendGeographyAndCompanyNamePayloadToBackend(payload: any,level : number): void {
+    this.expandAll(this.sectors);
+
+   // const payload = { "gics_sector": ["Health care"] };
+    this.apiService.postData(payload).subscribe(res => {
+      // console.log('POST result:', res);
+     // Assuming the structure is: res.counts[0].count
+  const count = res.counts && res.counts.length > 0 ? res.counts[0].count : 0;
+
+  console.log('Locations Extracted Count:', count);
+
+  // You can now store it in a component variable
+  if(level === 0){
+    this.geographyCount = count;
+  }else{
+    this.countryCount = count;
+  }
+  
+      
+    });
+  }
+
+
+
+
 
   expandAll(items: any[]): void {
     items.forEach(item => {
@@ -532,8 +649,14 @@ combined: any;
       }
     });
   }
-  ngOnInit(): void {
-  //  this.expandAll(this.sectors);
-  }
+  // ngOnInit(): void {
+  // //  this.expandAll(this.sectors);
+  //   if (this.geographyCount === 0 && this.selectedGeography.length === 0 && this.selectedCompanyName.length === 0) {
+  //     // Only fetch if data is not already present
+  //     this.displayCounts();
+  //   } else {
+  //     console.log('Using existing data:', this.geographyCount, this.selectedGeography, this.selectedCompanyName);
+  //   }
+  // }
   
 }
